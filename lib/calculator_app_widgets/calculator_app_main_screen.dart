@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'calculator_app_converter_screen.dart';
+
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -67,9 +69,21 @@ class _MainScreenState extends State <MainScreen> {
                   OutlinedButton(onPressed: null, child: Text("="))
                 ],
               ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  OutlinedButton(onPressed: () {
+                    Navigator.push(context, 
+                      MaterialPageRoute(builder: (context) => MileConverter()),
+                    );
+                  }
+                      , child: Text("Open Mile Converter")),
+                ],
+              )
             ],
           ),
         ),
     );
   }
 }
+
