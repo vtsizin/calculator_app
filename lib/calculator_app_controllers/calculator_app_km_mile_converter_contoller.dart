@@ -3,6 +3,6 @@ class KmToMileConverter {
   KmToMileConverter(this.value);
 
   num convertKmToMile() {
-    return value * 1.6;
+    return value / 1.6;
   }
 }
